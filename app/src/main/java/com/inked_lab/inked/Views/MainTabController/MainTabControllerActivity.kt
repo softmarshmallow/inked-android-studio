@@ -1,26 +1,19 @@
 package com.inked_lab.inked.Views.MainTabController
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.inked_lab.inked.R
 import devlight.io.library.ntb.NavigationTabBar
 import android.support.v4.view.ViewPager
-import android.graphics.Color.parseColor
-import android.support.v4.view.PagerAdapter
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main_tab_controller.*
-import android.R.string.cancel
-import android.provider.Telephony.MmsSms.PendingMessages.ERROR_TYPE
 import android.graphics.PorterDuff
 import android.support.v4.content.ContextCompat
 import android.support.design.widget.TabLayout
-import android.support.v7.app.AlertDialog
-import android.view.Menu
-import com.inked_lab.inked.R.string.action_settings
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.widget.Toast
+import com.inked_lab.inked.Views.DeveloperView.DeveloperSettingsActivity
 
 
 class MainTabControllerActivity : AppCompatActivity() {
@@ -38,7 +31,7 @@ class MainTabControllerActivity : AppCompatActivity() {
         val viewPager = mainTabViewPager
         viewPager.adapter = adapter
 
-        val colors = resources.getStringArray(R.array.default_preview)
+//        val preview_colors = resources.getStringArray(R.array.default_preview)
 
         val navigationTabBar = findViewById<View>(
                 R.id.ntb_horizontal) as NavigationTabBar
@@ -47,7 +40,7 @@ class MainTabControllerActivity : AppCompatActivity() {
         models.add(
                 NavigationTabBar.Model.Builder(
                         resources.getDrawable(R.drawable.ic_tab_featured),
-                        Color.parseColor(colors[0]))
+                        R.color.tabUnselectedIconColor)
                         .title("Home")
                         .badgeTitle("New")
                         .build()
@@ -55,8 +48,7 @@ class MainTabControllerActivity : AppCompatActivity() {
         models.add(
                 NavigationTabBar.Model.Builder(
                         resources.getDrawable(R.drawable.ic_tab_watch),
-                        Color.parseColor(colors[0]))
-
+                        R.color.tabUnselectedIconColor)
                         .title("Watchlist")
                         // .badgeTitle("with")
                         .build()
@@ -64,7 +56,7 @@ class MainTabControllerActivity : AppCompatActivity() {
         models.add(
                 NavigationTabBar.Model.Builder(
                         resources.getDrawable(R.drawable.ic_tab_alerts),
-                        Color.parseColor(colors[0]))
+                        R.color.tabUnselectedIconColor)
                         .title("Alerts")
                         .badgeTitle("3")
                         .build()
@@ -72,8 +64,7 @@ class MainTabControllerActivity : AppCompatActivity() {
         models.add(
                 NavigationTabBar.Model.Builder(
                         resources.getDrawable(R.drawable.ic_tab_more),
-                        Color.parseColor(colors[0]))
-                        //                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
+                        R.color.tabUnselectedIconColor)
                         .title("More")
                         // .badgeTitle("icon")
                         .build()
@@ -94,6 +85,15 @@ class MainTabControllerActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 navigationTabBar.models[position]
                         .hideBadge()
+
+                val tabType = MainTabType.fromInt(position)
+                when(tabType){
+                    MainTabType.More -> {
+                        val intent = Intent(this@MainTabControllerActivity, DeveloperSettingsActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
+
             }
 
             override fun onPageScrollStateChanged(state: Int) {

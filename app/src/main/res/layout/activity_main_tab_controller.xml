@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Views.MainTabController.MainTabControllerActivity"
     >
 
     <RelativeLayout
@@ -16,14 +17,16 @@
             android:id="@+id/NavigationTabBarContainer"
             android:layout_width="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_height="40dp">
+            android:layout_height="48dp">
 
 
             <devlight.io.library.ntb.NavigationTabBar
                 android:id="@+id/ntb_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:ntb_active_color="@color/colorWhite"
+                app:ntb_active_color="@color/tabSelectedIconColor"
+                app:ntb_inactive_color="@color/tabUnselectedIconColor"
+                app:ntb_preview_colors="@color/colorBlack"
                 app:ntb_badge_gravity="top"
                 app:ntb_badge_position="right"
                 app:ntb_badged="true"

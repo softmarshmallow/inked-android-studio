@@ -5,9 +5,6 @@ import android.os.Bundle
 import com.inked_lab.inked.R
 import android.content.Intent
 import android.os.Handler
-import android.view.WindowManager
-import com.inked_lab.inked.MainActivity
-import com.inked_lab.inked.Views.DeveloperView.DeveloperAccessActivity
 import com.inked_lab.inked.Views.MainTabController.MainTabControllerActivity
 
 

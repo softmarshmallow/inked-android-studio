@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation"
+            app:startDestination="@id/splashScreenActivity">
+
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.inked_lab.inked.Views.SplashScreenActivity"
+        android:label="SplashScreenActivity"/>
+    <activity
+        android:id="@+id/mainTabControllerActivity"
+        android:name="com.inked_lab.inked.Views.MainTabController.MainTabControllerActivity"
+        android:label="MainTabControllerActivity"/>
+</navigation>

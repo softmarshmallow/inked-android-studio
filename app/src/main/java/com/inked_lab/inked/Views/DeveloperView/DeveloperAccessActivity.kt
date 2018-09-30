@@ -14,7 +14,6 @@ class DeveloperAccessActivity : AppCompatActivity() {
         setContentView(R.layout.activity_developer_access)
 
         setDeveloperOptionButtonActions()
-
     }
 
     private fun setDeveloperOptionButtonActions(){
