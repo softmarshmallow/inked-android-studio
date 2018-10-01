@@ -18,7 +18,7 @@ class StockCalendarFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.stock_calendar_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_stock_calendar, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

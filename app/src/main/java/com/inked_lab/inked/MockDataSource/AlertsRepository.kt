@@ -6,7 +6,7 @@ class AlertsRepository private constructor(private val alertDao: FakeAlertsDao) 
 
     // This may seem redundant.
     // Imagine a code which also updates and checks the backend.
-    fun addalert(alert: AlertModel) {
+    fun addAlert(alert: AlertModel) {
         alertDao.addAlert(alert)
     }
 

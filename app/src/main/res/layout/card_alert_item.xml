@@ -7,18 +7,19 @@
     android:layout_height="138dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/AlertTitleTextView"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="28dp"
-        android:text="Message Title"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:maxLines="1"
+        android:text="@string/dummy_title_lorem"
+        app:layout_constraintStart_toEndOf="@+id/isReadedIndicatorImage"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/AlertContentTextView"
         android:layout_width="336dp"
         android:layout_height="67dp"
         android:layout_marginStart="8dp"
@@ -26,14 +27,18 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc "
+        android:layout_marginBottom="8dp"
+        android:maxLines="5"
+        android:text="@string/dummy_content_lorem"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        app:layout_constraintStart_toEndOf="@+id/isReadedIndicatorImage"
+        app:layout_constraintTop_toBottomOf="@+id/AlertTitleTextView"
+        app:layout_constraintVertical_bias="0.0"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/isReadedIndicatorImage"
         android:layout_width="8dp"
         android:layout_height="8dp"
         android:layout_marginStart="10dp"
@@ -45,6 +50,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/colorDivider"

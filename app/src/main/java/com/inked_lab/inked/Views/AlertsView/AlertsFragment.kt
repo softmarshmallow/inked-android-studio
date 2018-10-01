@@ -4,13 +4,16 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.inked_lab.inked.Models.AlertModel
 
 import com.inked_lab.inked.R
 import com.inked_lab.inked.Utils.InjectorUtils
-import kotlinx.android.synthetic.main.alerts_fragment.*
+import kotlinx.android.synthetic.main.fragment_alerts.*
 
 class AlertsFragment : Fragment() {
 
@@ -18,11 +21,12 @@ class AlertsFragment : Fragment() {
         fun newInstance() = AlertsFragment()
     }
 
+    lateinit var alertsRecyclerAdapter: AlertsRecyclerAdapter
     private lateinit var viewModel: AlertsViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.alerts_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_alerts, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -38,24 +42,22 @@ class AlertsFragment : Fragment() {
         viewModel = ViewModelProviders.of(this, factory)
                 .get(AlertsViewModel::class.java)
 
-        // Observing LiveData from the QuotesViewModel which in turn observes
+        // Observing LiveData from the AlertsViewModel which in turn observes
         // LiveData from the repository, which observes LiveData from the DAO ☺
+        alertsRecyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         viewModel.getAlerts().observe(this, Observer { alerts ->
-            val stringBuilder = StringBuilder()
-            alerts!!.forEach { alert ->
-                stringBuilder.append("$alert\n\n")
-            }
-            alertTestText.text = stringBuilder.toString()
+            alertsRecyclerAdapter = AlertsRecyclerAdapter(this.activity!!, alerts!!) { onAlertItemClick(it) }
+            alertsRecyclerView.adapter = alertsRecyclerAdapter
+
         })
 
-        // When button is clicked, instantiate a Quote and add it to DB through the ViewModel
-//        button_add_quote.setOnClickListener {
-//            val quote = AlertModel(editText_quote.text.toString(), editText_author.text.toString())
-//            viewModel.addQuote(quote)
-//            editText_quote.setText("")
-//            editText_author.setText("")
-//        }
     }
+
+
+    fun onAlertItemClick(item: AlertModel){
+        Toast.makeText(activity, "${item.time}", Toast.LENGTH_SHORT)
+    }
+
 
 
 }

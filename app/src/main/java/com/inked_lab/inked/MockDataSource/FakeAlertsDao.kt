@@ -6,7 +6,7 @@ import com.inked_lab.inked.Models.AlertModel
 
 class FakeAlertsDao {
     // A fake database table
-    private val alertList = mutableListOf<AlertModel>()
+    private val alertList = AlertsMockDataSource.AllAlertsList
     // MutableLiveData is from the Architecture Components Library
     // LiveData can be observed for changes
     private val alerts = MutableLiveData<List<AlertModel>>()

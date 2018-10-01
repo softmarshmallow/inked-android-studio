@@ -7,5 +7,5 @@ import com.inked_lab.inked.Models.AlertModel
 class AlertsViewModel(private val alertsRepository: AlertsRepository) : ViewModel() {
     fun getAlerts() = alertsRepository.getAlerts()
 
-    fun addAlert(alert: AlertModel) = alertsRepository.addalert(alert)
+    fun addAlert(alert: AlertModel) = alertsRepository.addAlert(alert)
 }
