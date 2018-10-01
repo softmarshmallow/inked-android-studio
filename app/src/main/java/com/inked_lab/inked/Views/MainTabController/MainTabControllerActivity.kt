@@ -1,7 +1,6 @@
 package com.inked_lab.inked.Views.MainTabController
 
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.inked_lab.inked.R

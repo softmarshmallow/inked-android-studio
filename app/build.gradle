@@ -2,13 +2,23 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'realm-android'
+
+
+realm {
+    syncEnabled = true;
+}
+
 
 android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.inked_lab.inked"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -36,6 +46,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Material Calendar
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
+
     // Navigation Tab bar
     implementation 'devlight.io:navigationtabbar:1.2.5'
     // Empty state view
