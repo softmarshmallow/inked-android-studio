@@ -15,8 +15,11 @@ import android.preference.PreferenceFragment
 import android.preference.PreferenceManager
 import android.preference.RingtonePreference
 import android.text.TextUtils
+import android.util.Log
 import android.view.MenuItem
 import com.inked_lab.inked.R
+import com.inked_lab.inked.Utils.AppCompatPreferenceActivity
+import com.inked_lab.inked.Views.StockCalendar.StockCalendarActivity
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
@@ -29,6 +32,7 @@ import com.inked_lab.inked.R
  * for more information on developing a Settings UI.
  */
 class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
+    private val TAG = "DeveloperSettingsActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +56,6 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
     /**
      * {@inheritDoc}
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     override fun onBuildHeaders(target: List<PreferenceActivity.Header>) {
         loadHeadersFromResource(R.xml.pref_headers, target)
     }
@@ -66,13 +69,13 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
                 || GeneralPreferenceFragment::class.java.name == fragmentName
                 || DataSyncPreferenceFragment::class.java.name == fragmentName
                 || NotificationPreferenceFragment::class.java.name == fragmentName
+                || HiddenViewsPreferenceFragment::class.java.name == fragmentName
     }
 
     /**
      * This fragment shows general preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     class GeneralPreferenceFragment : PreferenceFragment() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -90,11 +93,28 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             val id = item.itemId
             if (id == android.R.id.home) {
-                startActivity(Intent(activity, DeveloperSettingsActivity::class.java))
-                return true
+                activity.onBackPressed()
             }
             return super.onOptionsItemSelected(item)
         }
+    }
+
+
+
+    class HiddenViewsPreferenceFragment : PreferenceFragment() {
+        val TAG = "HiddenViewsPreference"
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            addPreferencesFromResource(R.xml.pref_hidden_views)
+            setHasOptionsMenu(true)
+            val CalendarViewToggle = findPreference("CalendarViewToggle") as Preference
+            CalendarViewToggle.setOnPreferenceClickListener {
+                startActivity(Intent(activity, StockCalendarActivity::class.java))
+                true
+            }
+
+        }
+
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.inked_lab.inked.Views.DeveloperView
+package com.inked_lab.inked.Utils
 
 import android.content.res.Configuration
 import android.os.Bundle

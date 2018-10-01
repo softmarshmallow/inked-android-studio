@@ -27,8 +27,6 @@ class AlertsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AlertsViewModel::class.java)
-        // TODO: Use the ViewModel
         initializeUi()
     }
 
@@ -37,7 +35,7 @@ class AlertsFragment : Fragment() {
         val factory = InjectorUtils.provideAlertsViewModelFactory()
         // Use ViewModelProviders class to create / get already created QuotesViewModel
         // for this view (activity)
-        val viewModel = ViewModelProviders.of(this, factory)
+        viewModel = ViewModelProviders.of(this, factory)
                 .get(AlertsViewModel::class.java)
 
         // Observing LiveData from the QuotesViewModel which in turn observes

@@ -8,8 +8,10 @@
     <color name="colorWhite">#FFFF</color>
     <color name="colorGrey">#7f7f7f</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorDivider">#c4c4c4</color>
 
 
+    <color name="colorNotificationTint">#ff5858</color>
 
     <color name="tabSelectedIconColor">@color/colorWhite</color>
     <color name="tabUnselectedIconColor">@color/colorGrey</color>

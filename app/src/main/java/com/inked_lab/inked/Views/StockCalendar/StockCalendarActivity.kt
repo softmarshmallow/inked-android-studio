@@ -2,6 +2,7 @@ package com.inked_lab.inked.Views.StockCalendar
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.inked_lab.inked.R
 
 class StockCalendarActivity : AppCompatActivity() {
 

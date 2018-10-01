@@ -1,0 +1,8 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:id="@+id/CalendarViewToggle"
+        android:key="CalendarViewToggle"
+        android:title="Calendar View"
+        />
+</PreferenceScreen>
