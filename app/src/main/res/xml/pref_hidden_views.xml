@@ -5,4 +5,11 @@
         android:key="CalendarViewToggle"
         android:title="Calendar View"
         />
+
+
+    <Preference
+        android:id="@+id/NotificationTestViewToggle"
+        android:key="NotificationTestViewToggle"
+        android:title="Notification Test View"
+        />
 </PreferenceScreen>

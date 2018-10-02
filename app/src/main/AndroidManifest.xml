@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".Views.StockCalendar.StockCalendarActivity">
         </activity>
+        <activity android:name=".Views.DeveloperView.TestViews.TestNotificationActivity">
+        </activity>
     </application>
 
 </manifest>

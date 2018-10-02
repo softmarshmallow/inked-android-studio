@@ -46,6 +46,9 @@ dependencies {
     // Material Calendar
     implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
 
+    // Custom WebView
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+
     // Navigation Tab bar
     implementation 'devlight.io:navigationtabbar:1.2.5'
     // Empty state view
@@ -54,6 +57,8 @@ dependencies {
     implementation 'com.yarolegovich:discrete-scrollview:1.4.7'
     // CircleImageView
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    // Rounded Image View
+    implementation 'com.makeramen:roundedimageview:2.3.0'
     // Gson
     implementation 'com.google.code.gson:gson:2.8.2'
     // Glide

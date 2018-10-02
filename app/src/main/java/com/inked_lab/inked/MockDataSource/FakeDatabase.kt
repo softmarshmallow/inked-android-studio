@@ -5,6 +5,8 @@ class FakeDatabase private constructor() {
     // All the DAOs go here!
     var alertsDao = FakeAlertsDao()
         private set
+    var newsDao = FakeNewsDao()
+        private set
 
     companion object {
         // @Volatile - Writes to this property are immediately visible to other threads

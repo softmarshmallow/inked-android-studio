@@ -19,6 +19,7 @@ import android.util.Log
 import android.view.MenuItem
 import com.inked_lab.inked.R
 import com.inked_lab.inked.Utils.AppCompatPreferenceActivity
+import com.inked_lab.inked.Views.DeveloperView.TestViews.TestNotificationActivity
 import com.inked_lab.inked.Views.StockCalendar.StockCalendarActivity
 
 /**
@@ -107,11 +108,20 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
             super.onCreate(savedInstanceState)
             addPreferencesFromResource(R.xml.pref_hidden_views)
             setHasOptionsMenu(true)
+
+
             val CalendarViewToggle = findPreference("CalendarViewToggle") as Preference
             CalendarViewToggle.setOnPreferenceClickListener {
                 startActivity(Intent(activity, StockCalendarActivity::class.java))
                 true
             }
+
+            val NotificationTestViewToggle = findPreference("NotificationTestViewToggle") as Preference
+            NotificationTestViewToggle.setOnPreferenceClickListener {
+                startActivity(Intent(activity, TestNotificationActivity::class.java))
+                true
+            }
+
 
         }
 

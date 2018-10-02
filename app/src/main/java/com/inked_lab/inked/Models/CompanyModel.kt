@@ -1,7 +1,11 @@
 package com.inked_lab.inked.Models
 
 
-class KRXStockCompanyModel{
+open class CompanyModel{
     var companyName: String = ""
+    var companyCategory: String = ""
+}
+
+class KRXStockCompanyModel: CompanyModel() {
     var companyCode: String = ""
 }
