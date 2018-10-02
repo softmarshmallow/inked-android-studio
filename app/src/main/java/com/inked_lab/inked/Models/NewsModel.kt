@@ -10,11 +10,22 @@ open class NewsModel(open val ID: String) : RealmObject() {
     var newsContent: String = context!!.getString(R.string.dummy_content_lorem)
     var originNewsUrl: String = "http://example.com/"
     var thumbnailUrl: String = "https://picsum.photos/200/"
+    var publisher: String = "XX일보"
 }
 
 
-class AnalyzedNewsModel(override val ID:String): NewsModel(ID) {
 
-    var realtedCompanies: MutableList<String> = mutableListOf()
+open class TaggedNewsModel(override val ID:String): NewsModel(ID){
+    var products = mutableListOf<String>()
+    var peoples = mutableListOf<String>()
+    var companies = mutableListOf<String>()
+    lateinit var primaryCompany :String
+}
+
+class AnalyzedNewsModel(override val ID:String): TaggedNewsModel(ID) {
+
+    var relatedNews: MutableList<AnalyzedNewsModel> = mutableListOf()
+    var relatedIncidents: MutableList<AnalyzedIncidentModel> = mutableListOf()
 
 }
+
