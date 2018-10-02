@@ -13,4 +13,6 @@ object InjectorUtils {
         val alertsRepository = AlertsRepository.getInstance(FakeDatabase.getInstance().alertsDao)
         return AlertsViewModelFactory(alertsRepository)
     }
+
+
 }
