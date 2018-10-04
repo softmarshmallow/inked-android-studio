@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "501447960935",
+    "firebase_url": "https://inked-frontent.firebaseio.com",
+    "project_id": "inked-frontent",
+    "storage_bucket": "inked-frontent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501447960935:android:65b7f2479f0da193",
+        "android_client_info": {
+          "package_name": "com.inked_lab.inked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501447960935-kppkgedp7lj9chv84ufo0ht23d0navaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inked_lab.inked",
+            "certificate_hash": "af536aa86d1db946b6f769d54a0200703b2715ac"
+          }
+        },
+        {
+          "client_id": "501447960935-mj1g23li0tj31m48pnpbg4bpa3bg19k0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApP9qA3yXBQUYbmkWik7JvNnJmoOwD3ME"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501447960935-mj1g23li0tj31m48pnpbg4bpa3bg19k0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
