@@ -5,6 +5,7 @@ import android.arch.lifecycle.MutableLiveData
 import com.inked_lab.inked.MockDataSource.AlertsMockDataSource
 import com.inked_lab.inked.MockDataSource.AlertsMockDataSource.Companion.AllAlertsList
 import com.inked_lab.inked.Models.AlertModel
+import com.inked_lab.inked.WebServices.ApiController.isOfflineMode
 
 
 fun GetAllAlerts(callback: (alerts: List<AlertModel>)->Unit, errorCallback: (errorMessage: String)->Unit){

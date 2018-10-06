@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.inked_lab.inked">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".InkedApplication"
@@ -24,7 +23,7 @@
             android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor"
-            android:theme="@style/FinestWebViewTheme.Light" />
+            android:theme="@style/FinestWebViewTheme.Light"/>
         <activity
             android:name=".Views.DeveloperView.DeveloperSettingsActivity"
             android:label="@string/title_activity_developer">
@@ -37,18 +36,20 @@
         </activity>
         <activity android:name=".Views.DeveloperView.TestViews.TestNotificationActivity">
         </activity>
-        <service
-            android:name=".AndroidServices.MainFirebaseInstanceIDService">
+
+        <service android:name=".AndroidServices.MainFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
-        <service
-            android:name=".AndroidServices.MainFirebaseMessagingService">
+        <service android:name=".AndroidServices.MainFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
+
+        <activity android:name=".Views.DeveloperView.TestViews.DeviceInformationViewActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -18,6 +18,8 @@ class SplashScreenActivity : AppCompatActivity() {
         // set as fullscreen
         setTheme(R.style.AppTheme_FullScreen_NoActionBar)
         setContentView(R.layout.activity_splash_screen)
+
+        Test()
     }
 
     fun StartWaiting() {
@@ -42,5 +44,9 @@ class SplashScreenActivity : AppCompatActivity() {
         val intent = Intent(this, MainTabControllerActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    fun Test(){
+        com.inked_lab.inked.Tests.Test.TestSplash()
     }
 }

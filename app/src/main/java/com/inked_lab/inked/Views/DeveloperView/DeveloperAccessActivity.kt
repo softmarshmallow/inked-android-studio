@@ -21,6 +21,5 @@ class DeveloperAccessActivity : AppCompatActivity() {
             intent = Intent(this, SplashScreenActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
