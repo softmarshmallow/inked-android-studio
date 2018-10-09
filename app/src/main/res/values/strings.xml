@@ -2,6 +2,12 @@
     <string name="app_name">inked</string>
     <string name="title_activity_developer">Developer</string>
 
+    <!--Facebook credentials-->
+    <string name="facebook_app_id">2129550097089150</string>
+    <string name="fb_login_protocol_scheme">fb2129550097089150</string>
+    <!--Facebook credentials-->
+
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->

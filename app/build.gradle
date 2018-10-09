@@ -49,6 +49,9 @@ dependencies {
     // Material Calendar
     implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
 
+    // Compact Calendar
+    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+
     // Custom WebView
     implementation 'com.thefinestartist:finestwebview:1.2.7'
 
@@ -79,14 +82,17 @@ dependencies {
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:1.15.0'
     //for Kotlin Coroutines support
     implementation 'com.github.kittinunf.fuel:fuel-gson:1.15.0' //for Gson support
-//    implementation 'com.github.kittinunf.fuel:fuel-jackson:1.15.0' //for Jackson support
-//    implementation 'com.github.kittinunf.fuel:fuel-moshi:1.15.0' //for Moshi support
-//    implementation 'com.github.kittinunf.fuel:fuel-forge:1.15.0' //for Forge support
-//    implementation 'com.github.kittinunf.fuel:fuel-reactor:1.15.0' //for Reactor support
+
+    // Google Login
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    // Facebook login
+    implementation 'com.facebook.android:facebook-login:[4,5)'
 
     // Firebase
     implementation 'com.google.firebase:firebase-messaging:17.3.3'
     implementation 'com.google.firebase:firebase-firestore:17.1.1'
     implementation 'com.google.firebase:firebase-storage:16.0.3'
     implementation 'com.google.firebase:firebase-auth:16.0.4'
+
 }

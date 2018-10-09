@@ -29,4 +29,99 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
+    <style name="button_primary" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <!--Region TextStyles-->
+    <style name="_08DisplayXxLargeInk">
+        <item name="android:textSize">48sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">-12sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_05DisplayRegularInk">
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_04DisplaySmallInk">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_07DisplayXLargeInk">
+        <item name="android:textSize">27sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_03HeadingInk">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_06DisplayLargeInk">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_01BodyInk">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_00CaptionInk">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_02SubheadingInk">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:textColor">#212b36</item>
+    </style>
+
+    <style name="_001CaptionInk">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">#9b9b9b</item>
+    </style>
+
+    <style name="_002CaptionInk">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:textColor">#9b9b9b</item>
+    </style>
+    <!--Endregion-->
+
 </resources>

@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main_tab_controller.*
 import android.graphics.PorterDuff
+import android.os.Handler
 import android.support.v4.content.ContextCompat
 import android.support.design.widget.TabLayout
 import android.widget.Toast
@@ -141,7 +142,17 @@ class MainTabControllerActivity : AppCompatActivity() {
         AskIfQuitApp()
     }
 
-    fun AskIfQuitApp() {
-        Toast(this).show()
+
+    private var doubleBackToExitPressedOnce = false
+    private fun AskIfQuitApp() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+
+        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 1500)
     }
 }

@@ -20,6 +20,7 @@ import android.view.MenuItem
 import com.inked_lab.inked.R
 import com.inked_lab.inked.Utils.AppCompatPreferenceActivity
 import com.inked_lab.inked.Views.DeveloperView.TestViews.TestNotificationActivity
+import com.inked_lab.inked.Views.DeveloperView.TestViews.WebApiTestActivity
 import com.inked_lab.inked.Views.StockCalendar.StockCalendarActivity
 
 /**
@@ -67,9 +68,9 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
      */
     override fun isValidFragment(fragmentName: String): Boolean {
         return PreferenceFragment::class.java.name == fragmentName
-                || GeneralPreferenceFragment::class.java.name == fragmentName
-                || DataSyncPreferenceFragment::class.java.name == fragmentName
-                || NotificationPreferenceFragment::class.java.name == fragmentName
+//                || GeneralPreferenceFragment::class.java.name == fragmentName
+//                || DataSyncPreferenceFragment::class.java.name == fragmentName
+//                || NotificationPreferenceFragment::class.java.name == fragmentName
                 || HiddenViewsPreferenceFragment::class.java.name == fragmentName
     }
 
@@ -119,6 +120,12 @@ class DeveloperSettingsActivity : AppCompatPreferenceActivity() {
             val NotificationTestViewToggle = findPreference("NotificationTestViewToggle") as Preference
             NotificationTestViewToggle.setOnPreferenceClickListener {
                 startActivity(Intent(activity, TestNotificationActivity::class.java))
+                true
+            }
+
+            val WebApiTestViewToggle = findPreference("WebApiTestViewToggle") as Preference
+            WebApiTestViewToggle.setOnPreferenceClickListener {
+                startActivity(Intent(activity, WebApiTestActivity::class.java))
                 true
             }
 

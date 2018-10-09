@@ -1,8 +1,9 @@
 package com.inked_lab.inked
 
-import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import com.facebook.FacebookSdk
+import com.facebook.appevents.AppEventsLogger
 import com.inked_lab.inked.WebServices.ApiController
 import io.realm.Realm
 
@@ -15,10 +16,16 @@ class InkedApplication: Application(){
         super.onCreate()
         Realm.init(this)
         context = this
-        setup()
+        initVPSApi()
+        initFacebook()
     }
 
-    fun setup(){
+    fun initVPSApi(){
         ApiController.setup()
+    }
+
+    fun initFacebook(){
+        FacebookSdk.sdkInitialize(applicationContext)
+        AppEventsLogger.activateApp(this)
     }
 }

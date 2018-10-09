@@ -9,5 +9,6 @@ data class StockEventModel(val ID: String){
     var eventTime: Date = Date("2018.12.25:12:12:12")
     var relatedNewsList: MutableList<AnalyzedNewsModel> = mutableListOf()
     var incidents: MutableList<String> = mutableListOf()
-
+    var links: MutableList<String> = mutableListOf()
+    var extraFields: Map<String, String> = hashMapOf()
 }

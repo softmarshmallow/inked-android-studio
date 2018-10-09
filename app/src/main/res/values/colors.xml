@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#ff5858</color>
-    <color name="colorSecondary">#ff5858</color>
+    <color name="colorPrimaryDark">@color/grapefruit</color>
+    <color name="colorSecondary">@color/grapefruit</color>
     <color name="colorAccent">#000000</color>
 
     <color name="colorWhite">#FFFF</color>
@@ -10,8 +10,8 @@
     <color name="colorBlack">#000000</color>
     <color name="colorDivider">#c4c4c4</color>
 
-
-    <color name="colorNotificationTint">#ff5858</color>
+    <color name="colorNotificationTint">@color/grapefruit</color>
+    <color name="grapefruit">#ff5858</color>
 
     <color name="tabSelectedIconColor">@color/colorWhite</color>
     <color name="tabUnselectedIconColor">@color/colorGrey</color>

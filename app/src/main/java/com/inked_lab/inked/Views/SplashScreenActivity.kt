@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.inked_lab.inked.R
 import android.content.Intent
 import android.os.Handler
+import com.inked_lab.inked.Views.AuthView.AuthHomeActivity
 import com.inked_lab.inked.Views.MainTabController.MainTabControllerActivity
 
 
@@ -41,7 +42,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
     fun MoveToNextActivity() {
         //TODO:: CHECK Update
-        val intent = Intent(this, MainTabControllerActivity::class.java)
+        val intent = Intent(this, AuthHomeActivity::class.java)
         startActivity(intent)
         finish()
     }
