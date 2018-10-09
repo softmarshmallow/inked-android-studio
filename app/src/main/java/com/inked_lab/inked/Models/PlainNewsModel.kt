@@ -3,7 +3,8 @@ package com.inked_lab.inked.Models
 import com.inked_lab.inked.InkedApplication.Companion.context
 import com.inked_lab.inked.R
 
-open class PlainNewsModel(open val ID: String) {
+open class PlainNewsModel() {
+    lateinit var ID: String
     var newsTitle: String = context!!.getString(R.string.dummy_title_cicero)
     var newsContent: String = context!!.getString(R.string.dummy_content_lorem)
     var originNewsUrl: String = "http://example.com/"
@@ -13,14 +14,14 @@ open class PlainNewsModel(open val ID: String) {
 
 
 
-open class TaggedNewsModel(override val ID:String): PlainNewsModel(ID){
+open class TaggedNewsModel: PlainNewsModel(){
     var products = mutableListOf<String>()
     var peoples = mutableListOf<String>()
     var companies = mutableListOf<String>()
     var primaryCompany :String = ""
 }
 
-class AnalyzedNewsModel(override val ID:String): TaggedNewsModel(ID) {
+class AnalyzedNewsModel: TaggedNewsModel() {
 
     var relatedNews: MutableList<AnalyzedNewsModel> = mutableListOf()
     var relatedIncidents: MutableList<AnalyzedIncidentModel> = mutableListOf()

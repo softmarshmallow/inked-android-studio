@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.inked_lab.inked.WebServices.StockCalendarService
 import java.io.Console
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -56,12 +57,19 @@ class WebApiTestActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
         Log.d(TAG,"position::$position")
         when(position){
             0 -> {
-                StockCalendarService.GetCalendarEvents(StockCalendarService.CalendarRangeType.Monthly, Date(2018, 10, 1), displayOnConsoleView, displayOnConsoleView)
+                val date = SimpleDateFormat("yyyyMMdd", Locale.KOREA).parse("20171009")
+                StockCalendarService.GetCalendarEvents(StockCalendarService.CalendarRangeType.Monthly, date, {
+                    var txt = "result:: "
+                    for (evnt in it){
+                        txt += "\n$evnt.eventName"
+                    }
+                    displayOnConsoleView(txt)
+                }, displayOnConsoleView)
             }
         }
     }
 
-    private val displayOnConsoleView: (String) -> Unit = {
+    private val displayOnConsoleView: (message: String) -> Unit = {
         textView_ApiResultDisplay.text = it
     }
 

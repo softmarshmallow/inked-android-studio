@@ -5,6 +5,7 @@ import com.inked_lab.inked.WebServices.StockCalendarService.GetCalendarEvents
 import org.junit.Test
 
 import org.junit.Assert.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -20,7 +21,8 @@ class ExampleUnitTest {
 
     @Test
     fun ApiTest_1(){
-        GetCalendarEvents(StockCalendarService.CalendarRangeType.Monthly, Date(2018, 10, 9),
+        val date = SimpleDateFormat("yyyyMMdd", Locale.KOREA).parse("20181009")
+        GetCalendarEvents(StockCalendarService.CalendarRangeType.Monthly, date,
                 {
                     print(it)
                 },
