@@ -90,4 +90,7 @@
     <string name="dummy_content_cicero">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</string>
     <string name="dummy_title_lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</string>
     <string name="dummy_title_cicero">Sed ut perspiciatis unde omnis iste natus error sit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -8,6 +8,7 @@ class StockCalendarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.AppTheme_NoActionBar)
         setContentView(R.layout.stock_calendar_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

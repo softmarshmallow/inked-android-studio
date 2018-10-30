@@ -8,12 +8,15 @@ import com.inked_lab.inked.Models.AlertModel
 import com.inked_lab.inked.WebServices.ApiController.isOfflineMode
 
 
-fun GetAllAlerts(callback: (alerts: List<AlertModel>)->Unit, errorCallback: (errorMessage: String)->Unit){
-    if (isOfflineMode){
+object AlertWebService{
+
+    fun GetAllAlerts(callback: (alerts: List<AlertModel>)->Unit, errorCallback: (errorMessage: String)->Unit){
+        if (isOfflineMode){
 //        callback(MutableLiveData(AllAlertsList))
-        callback(AllAlertsList)
-    }else{
+            callback(AllAlertsList)
+        }else{
+
+        }
 
     }
-
 }

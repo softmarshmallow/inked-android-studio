@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.inked_lab.inked">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -74,6 +75,8 @@
         <activity android:name=".Views.AuthView.AuthHomeActivity">
         </activity>
         <activity android:name=".Views.DeveloperView.TestViews.WebApiTestActivity">
+        </activity>
+        <activity android:name=".Views.CompanyDetailView.CompanyDetailActivity">
         </activity>
     </application>
 

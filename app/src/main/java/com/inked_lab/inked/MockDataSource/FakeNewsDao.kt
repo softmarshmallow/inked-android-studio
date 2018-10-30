@@ -1,5 +1,7 @@
 package com.inked_lab.inked.MockDataSource
 
+
+
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import com.inked_lab.inked.Models.PlainNewsModel

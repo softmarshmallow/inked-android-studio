@@ -30,7 +30,6 @@ class PlainNewsListFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(PlainNewsListViewModel::class.java)
 
-
         plainNewsRecyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         plainNewsRecyclerView.adapter = PlainNewsRecyclerAdapter(activity!!, NewsMockDataSource.AllNewsList, {
             FinestWebView.Builder(activity!!).show(it.originNewsUrl);

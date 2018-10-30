@@ -11,9 +11,22 @@
     <color name="colorDivider">#c4c4c4</color>
 
     <color name="colorNotificationTint">@color/grapefruit</color>
-    <color name="grapefruit">#ff5858</color>
 
     <color name="tabSelectedIconColor">@color/colorWhite</color>
     <color name="tabUnselectedIconColor">@color/colorGrey</color>
+
+
+    <color name="grapefruit">#ff5858</color>
+    <color name="salmon">#fd6b6b</color>
+    <color name="very_light_pink">#b7b7b7</color>
+    <color name="sky_blue">#6baefd</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#343434</color>
+    <color name="charcoal_grey">#47474d</color>
+    <color name="brownish_grey">#6b6b6b</color>
+    <color name="brown_grey">#9b9b9b</color>
+
+
+
 
 </resources>

@@ -211,11 +211,7 @@ class AuthHomeActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
     // [END auth_with_facebook]
 
 
-
-    // endregion
-
-
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
 
