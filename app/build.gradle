@@ -63,6 +63,9 @@ dependencies {
     // Material ui
 //    implementation 'com.google.android.material:material:1.0.0-beta01'
 
+    // Finest web view
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+
     // ChipView
     implementation 'com.robertlevonyan.view:MaterialChipView:1.2.4'
 

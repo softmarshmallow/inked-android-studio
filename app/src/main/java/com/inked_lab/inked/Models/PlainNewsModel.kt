@@ -13,18 +13,8 @@ open class PlainNewsModel() {
 }
 
 
-
-open class TaggedNewsModel: PlainNewsModel(){
-    var products = mutableListOf<String>()
-    var peoples = mutableListOf<String>()
-    var companies = mutableListOf<String>()
-    var primaryCompany :String = ""
-}
-
-class AnalyzedNewsModel: TaggedNewsModel() {
-
+class AnalyzedNewsModel: PlainNewsModel() {
+    lateinit var mainIncident: AnalyzedIncidentModel
     var relatedNews: MutableList<AnalyzedNewsModel> = mutableListOf()
     var relatedIncidents: MutableList<AnalyzedIncidentModel> = mutableListOf()
-
 }
-
