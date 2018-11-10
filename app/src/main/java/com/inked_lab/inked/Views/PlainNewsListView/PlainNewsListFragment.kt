@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.inked_lab.inked.MockDataSource.NewsMockDataSource
+import com.inked_lab.inked.MockDataSource.PlainNewsMockDataSource
 
 import com.inked_lab.inked.R
 import com.thefinestartist.finestwebview.FinestWebView
@@ -31,7 +31,7 @@ class PlainNewsListFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(PlainNewsListViewModel::class.java)
 
         plainNewsRecyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        plainNewsRecyclerView.adapter = PlainNewsRecyclerAdapter(activity!!, NewsMockDataSource.AllNewsList, {
+        plainNewsRecyclerView.adapter = PlainNewsRecyclerAdapter(activity!!, PlainNewsMockDataSource.AllNewsList, {
             FinestWebView.Builder(activity!!).show(it.originNewsUrl);
         })
     }

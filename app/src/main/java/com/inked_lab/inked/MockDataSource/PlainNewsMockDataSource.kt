@@ -1,8 +1,9 @@
 package com.inked_lab.inked.MockDataSource
 
+import com.inked_lab.inked.Models.AnalyzedNewsModel
 import com.inked_lab.inked.Models.PlainNewsModel
 
-class NewsMockDataSource{
+class PlainNewsMockDataSource{
     companion object {
 
         val News_1 = PlainNewsModel().apply {
@@ -43,3 +44,30 @@ class NewsMockDataSource{
         )
     }
 }
+
+
+object AnalyzedNewsMockDataSource{
+
+    val a_News_1 = AnalyzedNewsModel().apply {
+//        mainIncident
+    }
+
+    val a_News_2 = AnalyzedNewsModel().apply {
+        //        mainIncident
+    }
+
+
+    val a_News_3 = AnalyzedNewsModel().apply {
+        //        mainIncident
+    }
+
+
+    val a_News_4 = AnalyzedNewsModel().apply {
+        //        mainIncident
+    }
+
+    val analyzedNewsGroup_1 = mutableListOf(a_News_1, a_News_2, a_News_3, a_News_4)
+    val analyzedNewsGroup_2 = mutableListOf(a_News_1, a_News_2, a_News_3, a_News_4)
+    val analyzedNewsGroup_3 = mutableListOf(a_News_1, a_News_2, a_News_3, a_News_4)
+}
+
