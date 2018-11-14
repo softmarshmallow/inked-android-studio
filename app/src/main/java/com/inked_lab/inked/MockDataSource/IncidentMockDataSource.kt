@@ -7,7 +7,6 @@ import com.inked_lab.inked.Models.AnalyzedIncidentModel
 object IncidentMockDataSource{
 
     val Incident_1 = AnalyzedIncidentModel().apply {
-        incidentID = "0001"
         incidentContent = "삼성SDS 애플 납품 계약 체결"
         incidentType = "계약체결"
 //        incidentDate =

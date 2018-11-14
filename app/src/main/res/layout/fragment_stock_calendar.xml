@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
+            android:descendantFocusability="blocksDescendants"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -27,14 +28,22 @@
                 app:mcv_selectionColor="@color/grapefruit"
                 app:mcv_showOtherDates="none"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/stockCalendarEventRecyclerView"
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/calendarView"
-                tools:listitem="@layout/card_stock_calendar_item">
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/stockCalendarEventRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:clipChildren="true"
+                    android:clipToPadding="true"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView"
+                    tools:listitem="@layout/card_stock_calendar_item">
 
-            </android.support.v7.widget.RecyclerView>
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.NestedScrollView>
+
 
         </LinearLayout>
     </ScrollView>

@@ -49,5 +49,6 @@ class SplashScreenActivity : AppCompatActivity() {
 
     fun Test(){
         com.inked_lab.inked.Tests.Test.TestSplash()
+
     }
 }

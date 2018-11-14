@@ -22,11 +22,11 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/incidentNameTextView"
                 style="@style/_02SubheadingInk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 tools:text="대우전자 유상증자"/>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/incidentTimeTextView"
                 style="@style/_02SubheadingInk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,37 +47,48 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/brown_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/incidentNameTextView"
                 tools:text="10:00 AM — 10:30 AM"/>
 
             <TextView
+                android:id="@+id/incidentContentTextView"
                 style="@style/_002CaptionInk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginTop="8dp"
-                tools:text="대우전자 워크숍 결과 발표"
                 android:textColor="@color/brown_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"/>
-
+                app:layout_constraintTop_toBottomOf="@+id/incidentTimeTextView"
+                tools:text="대우전자 워크숍 결과 발표"/>
 
 
             <com.robertlevonyan.views.chip.Chip
-                android:id="@+id/chip"
+                android:id="@+id/incidentTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:mcv_backgroundColor="#aad"
-                app:mcv_textColor="@color/colorWhite"
                 app:mcv_chipIcon="@drawable/ic_facebook_login"
                 app:mcv_chipText="Facebook"
                 app:mcv_hasIcon="true"
-                tools:layout_editor_absoluteX="220dp"
-                tools:layout_editor_absoluteY="16dp"/>
+                app:mcv_textColor="@color/colorWhite"/>
+
+            <com.inked_lab.inked.CustomViews.LiveStockPriceView
+                android:id="@+id/incidentCompanyPriceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </com.inked_lab.inked.CustomViews.LiveStockPriceView>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

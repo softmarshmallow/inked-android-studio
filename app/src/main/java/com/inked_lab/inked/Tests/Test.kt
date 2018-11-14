@@ -8,8 +8,7 @@ import android.R.id.edit
 import android.app.PendingIntent.getActivity
 import android.content.Context
 import com.google.firebase.internal.FirebaseAppHelper.getToken
-
-
+import com.inked_lab.inked.WebServices.LiveStockPriceService.GetLivePrice
 
 
 object Test{
@@ -23,6 +22,12 @@ object Test{
             Log.d(TAG, it.localizedMessage)
 
         }
+        TestCompDataApi()
+    }
+
+
+    fun TestCompDataApi(){
+        GetLivePrice("005930", {})
     }
 
 }

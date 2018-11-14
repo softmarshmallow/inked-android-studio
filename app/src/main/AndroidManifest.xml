@@ -78,6 +78,8 @@
         </activity>
         <activity android:name=".Views.CompanyDetailView.CompanyDetailActivity">
         </activity>
+        <activity android:name=".Views.IncidentDetailView.IncidentDetailActivity">
+        </activity>
     </application>
 
 </manifest>

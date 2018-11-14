@@ -12,6 +12,7 @@ class AlertsMockDataSource{
             content = context!!.getString(R.string.dummy_content_lorem)
             isReaded = true
             humanTime = "seconds ago"
+
         }
 
         val alert2 = AlertModel("0").apply {

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter
 import com.inked_lab.inked.Views.AlertsView.AlertsFragment
 import com.inked_lab.inked.Views.HomeView.HomeFragment
 import com.inked_lab.inked.Views.PlainNewsListView.PlainNewsListFragment
+import com.inked_lab.inked.Views.StockCalendar.StockCalendarFragment
 import com.inked_lab.inked.Views.WatchListView.WatchListFragment
 
 class MainTabPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm) {
@@ -16,6 +17,7 @@ class MainTabPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm) 
 
     private var homeFragment: Fragment = HomeFragment()
     private var plainNewsListFragment = PlainNewsListFragment()
+    private var stockCalendarFragment = StockCalendarFragment()
     private var watchListFragment: Fragment = WatchListFragment()
     private var extraOptionsFragment: Fragment = Fragment()
     private var alertsFragment: Fragment = AlertsFragment()
@@ -30,6 +32,9 @@ class MainTabPagerAdapter(fm: FragmentManager?) : FragmentStatePagerAdapter(fm) 
             }
             MainTabType.WatchList -> {
                 watchListFragment
+            }
+            MainTabType.Calendar -> {
+                stockCalendarFragment
             }
             MainTabType.Alert -> {
                 alertsFragment

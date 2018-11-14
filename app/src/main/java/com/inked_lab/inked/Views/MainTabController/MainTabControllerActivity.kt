@@ -55,6 +55,14 @@ class MainTabControllerActivity : AppCompatActivity() {
         )
         models.add(
                 NavigationTabBar.Model.Builder(
+                        resources.getDrawable(R.drawable.ic_tab_market),
+                        R.color.tabUnselectedIconColor)
+                        .title("Calendar")
+                        // .badgeTitle("with")
+                        .build()
+        )
+        models.add(
+                NavigationTabBar.Model.Builder(
                         resources.getDrawable(R.drawable.ic_tab_alerts),
                         R.color.tabUnselectedIconColor)
                         .title("Alerts")

@@ -5,23 +5,11 @@ import java.util.*
 
 
 data class StockCalendarEventModel
-(@SerializedName("id") val ID: String)
+(@SerializedName("id") val ID: String): AnalyzedIncidentModel()
 {
 
     @SerializedName("event_name")
-    var eventName: String = "New Event"
-
-    @SerializedName("event_content")
-    var eventContent: String = "event description goes here..."
-
-    @SerializedName("event_time")
-    lateinit var eventTime: Date
-
-    @SerializedName("related_news_list")
-    var relatedNewsList: MutableList<AnalyzedNewsModel> = mutableListOf()
-
-    @SerializedName("incidents")
-    var incidents: MutableList<String> = mutableListOf()
+    var eventName: String = "Event"
 
     @SerializedName("links")
     var links: MutableList<String> = mutableListOf()
